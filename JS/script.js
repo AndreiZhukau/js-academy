@@ -1,53 +1,32 @@
 "use strict";
 
-//if (4 == 9) {
-//  console.log('ok!');
+let num = 50;
+
+//while (num < 55) {
+//    console.log(num);
+//    num++;
 //}
 
-//if (4 == 4) {
-//  console.log('ok!');
+//do {
+//    console.log(num);
+//    num++;
+//}
+//while (num < 55);
+
+//for (let i = 1; i < 8; i++) {
+//  console.log(i);
 //}
 
-//if (4 == 9) {
-//  console.log('ok!');
-//} else {
-//  console.log('error');
+//for (let i = 1; i < 8; i++) {
+//    if (i === 6) {
+//      break;
+//    }
+//      console.log(i);
 //}
 
-//if (1) {
-//  console.log('ok!');
-//} else {
-//  console.log('error');
-//}
-
-
-//const num = 50;
-
-//if (num < 49) {
-//  console.log('error');
-//} else if (num > 100) {
-//  console.log('Много');
-//} else {
-// console.log('ok');
-//}
-
-//(num === 50) ? console.log('ok') : console.log('error');
-
-
-
-const num = 50;
-
-switch (num) {
-    case 49:
-      console.log('неверно');
-      break;
-    case 100:
-      console.log('неверно');
-      break;
-    case 50:
-      console.log('верно');
-      break;
-    default:
-      console.log('Не в этот раз');
-      break;
+for (let i = 1; i < 8; i++) {
+    if (i === 6) {
+      continue;
+    }
+      console.log(i);
 }
