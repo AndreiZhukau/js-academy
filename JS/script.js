@@ -1,35 +1,29 @@
 'use strict';
 
-let num = 20;
+const str = "test";
 
-function showFirstMassage(text) {
-    console.log(text);
-    num = 30;
-}
 
-//showFirstMassage("Hello World");
-//console.log(num);
-//
-//function calc(a, b) {
-//    return (a + b);
-//}
-//
-//console.log(calc(4, 3));
-//console.log(calc(5, 6));
-//console.log(calc(10, 6));
+//console.log(str.toLocaleUpperCase());
+console.log(str.toLocaleLowerCase());
+console.log(str);
 
-function ret() {
-    let num = 50;
-    return num;
-}
+const fruit = "some fruit";
 
-const anotherNum = ret();
-console.log(anotherNum);
+console.log(fruit.indexOf('fruit'));
 
-const logger = function() {
-  console.log("hello")
-};
+const logg = "Hello world";
 
-logger();
+console.log(logg.slice(6, 11));  // вырезает с 6й буквы по 11
 
-const calc = (a, b) => a + b;
+console.log(logg.substring(6, 11));  // вырезает с 6й буквы по 11
+
+console.log(logg.substr(6, 5));  // вырезает с 6й буквы, а вторая цифра 5 это количество букв
+
+
+const num = 12.2;
+console.log(Math.round(num)); //округляет число
+
+const test = "12.2px";
+console.log(parseInt(test)); // преобразовает значение в округленное число
+console.log(parseFloat(test));
+
