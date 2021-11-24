@@ -1,45 +1,23 @@
-// Урок номер 31 - События и их обработчики
+// Урок номер 32 - Навигация по DOM - элементам, data-атрибуты, преимущество for/of
 
-const btn = document.querySelector('button');
-      overlay = document.querySelector('.overlay');
-//btn.onclick = function() {
-//    alert('Click');
-//};
+//console.log(document.head);
+//console.log(document.documentElement);
+//console.log(document.body.childNodes);
+//console.log(document.body.firstChild);
+//console.log(document.body.firstElementChild);
+//console.log(document.body.lastChild);
 
-//btn.addEventListener('click', () => {
-//    alert('Click');
-//});
-//
-//btn.addEventListener('click', () => {
-//    alert('Second click');
-//});
-let i = 0;
-const deleteElement = (e) => {
-  //  //e.target.remove();
-    //console.log(e.currentTarget);
-    console.log(e.target);
-    console.log(e.type);
+//console.log(document.querySelector('#current')).parentElement;
+//console.log(document.querySelector('#current')).parentNode.parentNode;
 
-  //  i++;
-  //  if (i ==1) {
-  //      btn.removeEventListener('click', deleteElement);
-  //  }
-};
+//console.log(document.querySelector('[data-current="3"]').nextElementSibling);
+//console.log(document.querySelector('[data-current="3"]').previousSibling);
+//console.log(document.querySelector('[data-current="3"]').nextElementSibling);
 
-btn.addEventListener('click', deleteElement);
-overlay.addEventListener('click', deleteElement);
+for (let node of document.body.childNodes) {
+    if (node.nodeName == '#text') {
+        continue;
+    }
 
-const link = document.querySelector('a');
-
-link.addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log(event.target);
-});
-
-//btn.removeEventListener('click', deleteElement);
-//btn.addEventListener('mouseenter', (e) => {
-//    //console.log(e);
-//    //console.log(e.target);
-//    e.target.remove();
-//    //console.log('Hover');
-//});
+    console.log(node);
+}
