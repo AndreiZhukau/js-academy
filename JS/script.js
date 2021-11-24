@@ -1,51 +1,45 @@
-// Урок номер 29 - Действия с элементами на странице
+// Урок номер 31 - События и их обработчики
 
-'use strict';
+const btn = document.querySelector('button');
+      overlay = document.querySelector('.overlay');
+//btn.onclick = function() {
+//    alert('Click');
+//};
 
-const box = document.getElementById('box'),
-      btns = document.getElementsByTagName('button'),
-      circle = document.getElementsByClassName('circle'),
-      wrapper = document.querySelector('.wrapper'),
-      hearts = document.querySelectorAll('.heart'),
-      oneHeart = document.querySelector('.heart');
-//box.style.backgroundColor = 'blue';
-//box.style.width = '500px';
+//btn.addEventListener('click', () => {
+//    alert('Click');
+//});
+//
+//btn.addEventListener('click', () => {
+//    alert('Second click');
+//});
+let i = 0;
+const deleteElement = (e) => {
+  //  //e.target.remove();
+    //console.log(e.currentTarget);
+    console.log(e.target);
+    console.log(e.type);
 
-box.style.cssText = 'background-color: blue; width: 500px';
+  //  i++;
+  //  if (i ==1) {
+  //      btn.removeEventListener('click', deleteElement);
+  //  }
+};
 
-btns[1].style.borderRadius = '100%';
-circle[0].style.backgroundColor = 'red';
+btn.addEventListener('click', deleteElement);
+overlay.addEventListener('click', deleteElement);
 
-//for (let i = 0; i < hearts.length; i++) {
-//    hearts[i].style.style.backgroundColor = 'blue';
-//}
+const link = document.querySelector('a');
 
-hearts.forEach(item => {
-    item.style.backgroundColor = 'blue';
+link.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log(event.target);
 });
 
-const div = document.createElement('div');
-//const text = document.createTextNode('Тут был я');
-
-div.classList.add('black');
-
-wrapper.append(div);
-//wrapper.appendChild(div); устаревший метод
-
-//wrapper.prepend(div);
-
-//hearts[0].before(div);
-//hearts[0].after(div);
-//wrapper.insertBefore(div, hearts[0]); устаревший метод
-
-//circle[0].remove();
-//wrapper.removeChild(hearts[1]); устаревший метод
-
-//hearts[0].replaceWith(circle[0]);
-//wrapper.replaceChild(circle[0], hearts[0]); устаревший метод
-
-div.innerHTML = "<h1>Hello World</h1>";
-
-//div.textContent = "hello";
-
-div.insertAdjacentHTML("beforeend", '<h2>Hi</h2>');
+//btn.removeEventListener('click', deleteElement);
+//btn.addEventListener('mouseenter', (e) => {
+//    //console.log(e);
+//    //console.log(e.target);
+//    e.target.remove();
+//    //console.log('Hover');
+//});
